@@ -1,3 +1,4 @@
+using RealHousing.ApiLayer.Controllers;
 using RealHousing.BusinessLayer.Abstract;
 using RealHousing.BusinessLayer.Concreate;
 using RealHousing.DataAccessLayer.Abstract;
@@ -16,6 +17,15 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IProductDal, EfProductDal>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 
+builder.Services.AddHttpClient();
+builder.Services.AddControllersWithViews();
+
+//builder.Services.AddHttpClient<CategoryController>(client =>
+//{
+//    client.BaseAddress = new Uri("https://localhost:44352/api/Category");
+//    client.DefaultRequestHeaders.Add("Accept", "application/json");
+//});
+//builder.Services.AddHttpClient<ICategoryService>();
 
 builder.Services.AddControllersWithViews()
     .AddJsonOptions(options =>
