@@ -3,7 +3,6 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 <br /> <br />
 <div class="container">
@@ -15,6 +14,7 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>@item.CategoryID</td>
                 <td>@item.CategoryName</td>
             </tr>
         }
