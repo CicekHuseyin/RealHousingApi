@@ -1,0 +1,41 @@
+﻿@model AddProductViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <h1>İlan Ekleme Sayfası</h1>
+    <br />
+    <form method="post" class="container">
+        <label>İlan Başlığı</label>
+        <input type="text" asp-for="ProductTitle" class="form-control" />
+        <br />
+        <label>Fiyatı</label>
+        <input type="text" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <label>İlan Türü</label>
+        <input type="text" asp-for="ProductType" class="form-control" />
+        <br />
+        <label>İlan Adresi</label>
+        <input type="text" asp-for="ProductAdress" class="form-control" />
+        <br />
+        <label>Yatak Odası Sayısı</label>
+        <input type="text" asp-for="BedRoomCount" class="form-control" />
+        <br />
+        <label>Banyo Sayısı</label>
+        <input type="text" asp-for="BathCount" class="form-control" />
+        <br />
+        <label>Metrekare Bilgisi</label>
+        <input type="text" asp-for="Square" class="form-control" />
+        <br />
+        <label>İlan Görsel URL</label>
+        <input type="text" asp-for="CoverImageUrl" class="form-control" />
+        <br />
+        <label>Kategori</label>
+        @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.category,new {@class="form-control"})
+        <br />
+        <button class="btn btn-outline-info">Kaydet</button>
+    </form>
+</div>
+

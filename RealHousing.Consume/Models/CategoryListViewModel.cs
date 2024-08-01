@@ -1,4 +1,6 @@
-﻿namespace RealHousing.Consume.Models
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace RealHousing.Consume.Models
 {
     public class CategoryListViewModel
     {

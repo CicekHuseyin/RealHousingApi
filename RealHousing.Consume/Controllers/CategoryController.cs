@@ -22,7 +22,6 @@ namespace RealHousing.Consume.Controllers
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<CategoryListViewModel>>(jsonData);
-                //return Ok(values);
                 return View(values);
             }
             return View();

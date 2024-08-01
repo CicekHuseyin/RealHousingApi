@@ -46,14 +46,14 @@ namespace RealHousing.ApiLayer.Controllers
             _productService.TInsert(product);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var values=_productService.TGetByID(id);
             _productService.TDelete(values);
             return Ok();
         }
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var values = _productService.TGetByID(id);
